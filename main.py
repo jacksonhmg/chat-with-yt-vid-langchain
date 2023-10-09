@@ -16,3 +16,7 @@ if animal_type == "Cow":
 
 if animal_type == "Hamster":
     pet_colour = st.sidebar.text_area("What is your Hamster's colour?", max_chars=15)
+
+if pet_colour:
+    response = lch.generate_pet_names(animal_type, pet_colour)
+    st.text(response)
