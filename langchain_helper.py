@@ -7,7 +7,7 @@ from langchain.chains import LLMChain
 from langchain.vectorstores import FAISS
 from dotenv import load_dotenv
 
-load_dotenv()
+#load_dotenv()
 
 embeddings = OpenAIEmbeddings()
 
