@@ -7,8 +7,6 @@ from langchain.chains import LLMChain
 from langchain.vectorstores import FAISS
 from dotenv import load_dotenv
 
-#load_dotenv()
-
 embeddings = OpenAIEmbeddings()
 
 video_url = "https://www.youtube.com/watch?v=MVYrJJNdrEg&t=1577s&ab_channel=LexFridman"
