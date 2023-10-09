@@ -19,4 +19,4 @@ if animal_type == "Hamster":
 
 if pet_colour:
     response = lch.generate_pet_names(animal_type, pet_colour)
-    st.text(response)
+    st.text(response['pet_name'])
