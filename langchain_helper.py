@@ -23,13 +23,13 @@ def create_vector_db_from_youtube_url(video_url: str) -> FAISS:
     db = FAISS.from_documents(docs, embeddings)
     return db
 
-def get_response_from_query(db, query, k=4):
+def get_response_from_query(db, query, openai_api_key, k=4):
     # text-danvinci can handle 4097 tokens
 
     docs = db.similarity_search(query, k=k)
     docs_page_content = " ".join([d.page_content for d in docs])
 
-    llm = OpenAI(model="text-davinci-003")
+    llm = OpenAI(model="text-davinci-003", openai_api_key=openai_api_key)
 
     prompt = PromptTemplate(
         input_variables=["question", "docs"],
