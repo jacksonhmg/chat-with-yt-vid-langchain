@@ -32,7 +32,7 @@ def get_response_from_query(db, query, k=4):
     llm = OpenAI(model="text-davinci-003")
 
     prompt = PromptTemplate(
-        input_variable=["question", "docs"],
+        input_variables=["question", "docs"],
         template="""
 You are a helpful assistant that that can answer questions about youtube videos 
         based on the video's transcript.
